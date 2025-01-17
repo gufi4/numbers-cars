@@ -5,8 +5,9 @@ import { getCollection } from '../../Api/response';
 import { useState } from 'react';
 import { BigNumber} from '../../models/BtnNumber';
 import ButtonNumber from '../../Components/ButtonNumber/ButtonNumber';
-// import Axios  from 'axios';
-// import { DOMEN } from '../../Api/DOMEN';
+import Lottie from 'lottie-react';
+
+import loadingAnimation from '../../assets/loading.json'
 
 
 function CollectionPage() {
@@ -35,7 +36,7 @@ function CollectionPage() {
 return (
     <>
     {loading ? (
-        <p>Loading...</p>
+        <Lottie animationData={loadingAnimation} loop={true} />
     ) : (
         <MyComponent data={apiData} />
     )
@@ -74,7 +75,7 @@ const MyComponent = ( data ) => {
                 {nums.map((item) => (
                     <ButtonNumber 
                     key={item.id}  
-                    startnumder={item.startName} 
+                    startnumber={item.startName} 
                     endnumber={item.endName}
                     items={item.items}
                     />
