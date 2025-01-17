@@ -3,7 +3,7 @@ import flag from '../../assets/flag-russia.svg'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-function ButtonNumber( { startnumder, endnumber, items} ) {
+function ButtonNumber( { startnumber, endnumber, items} ) {
     const [isOpen, setIsOpen] = useState(true)
 
 
@@ -16,35 +16,51 @@ return (
                 setIsOpen(true)}, 3000)
             }}>
                 {/* two numbers */}
-                <div className="NumberDiv">
-
+                {/* <div className="firstNumberDiv">
+                    <div className="leftDiv">
+                        <p>A{startnumder}AA</p>
+                    </div>
+                    <div className="rightDiv">
+                        <span>34</span>
+                        <div className='regionDiv'>
+                            <span>rus</span>
+                            <img src={flag} alt="flag russia" />
+                        </div>
+                    </div>
                 </div>
+
+                <div className="secondNumberDiv">
+                    <div className="leftDiv">
+                        <p>A{endnumber}AA</p>
+                    </div>
+                    <div className="rightDiv">
+                        <span>34</span>
+                        <div className='regionDiv'>
+                            <span>rus</span>
+                            <img src={flag} alt="flag russia" />
+                        </div>
+                    </div>
+                </div> */}
 
 
 
                 {/* one number */}
-            {/* <div className='leftNumberDiv'>
-                <div className="titleNumberDiv">
-                    <span>A</span>
-                    <span className='titleNumber'>{startnumder}-{endnumber}</span>
-                    <span>AA</span>
-                </div>
-                
+            <div className='leftDiv'>
+                <span>A{startnumber}-{endnumber}AA</span>
             </div>
 
-            <div className="rightNumberDiv">
+            <div className="rightDiv">
                 <span>34</span>
-                
                 <div className='regionDiv'>
-                    <p>rus</p>
+                    <span>RUS</span>
                     <img src={flag} alt="flag russia" />
                 </div> 
-            </div> */}
+            </div>
         </button>
 
         <div className={`numberList ${!isOpen ? "active" : ""}`} >
             {items.map((item) => (
-                <Link className='btn' to={'/item'} key={item.id}>X {item.startName} - {item.endName} XX</Link>
+                <Link className='btn' to={'/item'} key={item.id}>X{item.startName}-{item.endName}XX</Link>
             ))}
         </div>
     </div>

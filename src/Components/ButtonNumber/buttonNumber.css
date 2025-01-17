@@ -1,44 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap");
 .btnNumberDiv {
   display: flex;
   position: relative;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border: 5px solid black;
+  gap: 4px;
   text-decoration: none;
-  color: black;
   border-radius: 15px;
-  background: #e2e2e2;
-  padding: 5px 0;
-  cursor: pointer;
-  font-size: 40px;
+  background: black;
   font-family: "RoadNumbers";
   width: 350px;
+  padding: 3px;
   z-index: 0;
 }
-.btnNumberDiv p {
-  margin: 0;
-}
-.btnNumberDiv .leftNumberDiv {
-  width: 100%;
+.btnNumberDiv .leftDiv {
+  width: 75%;
   display: flex;
   justify-content: center;
+  font-size: 58px;
+  background: white;
+  border-radius: 10px;
+  padding: 3px 0;
 }
-.btnNumberDiv .rightNumberDiv {
+.btnNumberDiv .rightDiv {
+  width: 25%;
   display: flex;
   flex-direction: column;
-  margin-right: 15px;
-  border-left: 1.5px solid black;
-  padding-left: 20px;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  padding: 9px 0 9px 3px;
 }
-.btnNumberDiv .rightNumberDiv img {
-  width: 22px;
-  margin-left: 5px;
+.btnNumberDiv .rightDiv span {
+  padding-right: 5px;
+  font-size: 45px;
 }
-.btnNumberDiv .rightNumberDiv .regionDiv {
+.btnNumberDiv .rightDiv .regionDiv {
   display: flex;
   flex-direction: row;
-  font-family: "Times New Roman", Times, serif;
+  align-items: center;
+  height: 20px;
+}
+.btnNumberDiv .rightDiv .regionDiv span {
+  padding-right: 3px;
+  padding-top: 5px;
+  font-size: 32px;
+  font-family: "Dongle", serif;
+  font-weight: 700;
+}
+.btnNumberDiv .rightDiv .regionDiv img {
+  width: 25px;
 }
 
 .numberList {
@@ -57,10 +70,13 @@
   z-index: 1;
 }
 .numberList .btn {
+  width: 40%;
+  text-align: center;
+  font-family: "RoadNumbers";
+  font-size: 32px;
   background: white;
-  font-size: 18px;
   margin: 5px 0;
-  padding: 5px;
+  padding: 0 10px;
   border: 1px solid black;
   border-radius: 10px;
   text-decoration: none;

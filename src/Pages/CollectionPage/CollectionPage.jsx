@@ -75,7 +75,7 @@ const MyComponent = ( data ) => {
                 {nums.map((item) => (
                     <ButtonNumber 
                     key={item.id}  
-                    startnumder={item.startName} 
+                    startnumber={item.startName} 
                     endnumber={item.endName}
                     items={item.items}
                     />
