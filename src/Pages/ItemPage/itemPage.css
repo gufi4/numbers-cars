@@ -5,21 +5,6 @@
   justify-content: space-evenly;
   gap: 10px;
   margin: 15px 0;
-  background-size: auto;
-}
-.itemDiv .item {
-  display: flex;
-  align-items: self-end;
-  justify-content: center;
-  background-size: cover;
-  height: 300px;
-  width: 95%;
-}
-.itemDiv .item p {
-  border: 1px solid aliceblue;
-  color: white;
-  font-weight: bold;
-  font-size: 55px;
 }
 .itemDiv .link {
   text-decoration: none;
@@ -28,7 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1500px;
+  width: 150px;
   height: 150px;
   background: #e2e2e2;
 }
@@ -43,6 +28,4 @@
   width: 350px;
   height: 350px;
   margin: 60px 15px;
-}
-
-/*# sourceMappingURL=itemPage.css.map */
+}/*# sourceMappingURL=itemPage.css.map */
