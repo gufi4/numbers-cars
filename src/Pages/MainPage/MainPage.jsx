@@ -1,7 +1,7 @@
 import './mainPage.css'
 import Lottie from 'lottie-react'
 
-import loading from '../../assets/loading.json'
+import startAnimation from '../../assets/start-animation.json'
 
 
 function MainPage() {
@@ -11,7 +11,7 @@ return (
     <div className='main'>
 
         <div className='contentDiv'>
-            <Lottie animationData={loading} loop={true} />
+            <Lottie animationData={startAnimation} loop={true} />
         </div>
     </div>
     </>

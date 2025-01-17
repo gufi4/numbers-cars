@@ -11,7 +11,7 @@
   background: #e2e2e2;
   padding: 5px 0;
   cursor: pointer;
-  font-size: 60px;
+  font-size: 40px;
   font-family: "RoadNumbers";
   width: 350px;
   z-index: 0;
@@ -31,13 +31,14 @@
   border-left: 1.5px solid black;
   padding-left: 20px;
 }
+.btnNumberDiv .rightNumberDiv img {
+  width: 22px;
+  margin-left: 5px;
+}
 .btnNumberDiv .rightNumberDiv .regionDiv {
   display: flex;
   flex-direction: row;
-}
-.btnNumberDiv .rightNumberDiv .regionDiv img {
-  width: 22px;
-  margin-left: 5px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .numberList {
