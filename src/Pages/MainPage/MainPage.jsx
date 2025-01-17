@@ -1,7 +1,7 @@
 import './mainPage.css'
 import Lottie from 'lottie-react'
 
-import loading from '../../assets/loading1.json'
+import loading from '../../assets/loading.json'
 
 
 function MainPage() {
