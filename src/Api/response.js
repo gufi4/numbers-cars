@@ -17,16 +17,26 @@ export const getUsers = Axios.get(`${DOMEN}/users`, config)
     });
 
 
-    export async function getCollection(id) {
-        try {
-            let response = await Axios.get(`${DOMEN}/collections/${id}`, config);
-            return response.data.data;
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
+export async function getCollection(id) {
+    try {
+        let response = await Axios.get(`${DOMEN}/collections/${id}`, config);
+        return response.data.data;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
     //     await Axios.get(`${DOMEN}/collections/${id}`)
     // .then(function (res) {
     //     const data = res.data.data;
     //     console.log(data);
     //     return data;
+}
+
+export async function getItemsRange(collectionId, numberName) {
+    try {
+        let response = await Axios.get(`${DOMEN}/collection/items?array=${numberName}&collection_id=${collectionId}`, config);
+        console.log(response.data.data);
+        return response.data.data;
+    } catch (error) {
+        console.error('Error fetching data:', error);
     }
+}

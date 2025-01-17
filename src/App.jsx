@@ -19,7 +19,7 @@ const router = createBrowserRouter([
         element: <CollectionPage/>,
       },
       {
-        path: '/item',
+        path: '/item/:id/:numberName',
         element: <ItemPage/>,
       },
 
