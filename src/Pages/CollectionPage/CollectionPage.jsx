@@ -42,7 +42,7 @@ return (
     }
     </>
 );
-};
+}
 
 const MyComponent = ( data ) => {
     const collection = data.data;
