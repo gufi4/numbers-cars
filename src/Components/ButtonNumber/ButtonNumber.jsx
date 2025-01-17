@@ -15,17 +15,31 @@ return (
             setTimeout(() => {
                 setIsOpen(true)}, 3000)
             }}>
-            <div className='leftNumberDiv'>
-                <p className='titleNumber'>{`X ${startnumder} - ${endnumber} XX`}</p>
+                {/* two numbers */}
+                <div className="NumberDiv">
+
+                </div>
+
+
+
+                {/* one number */}
+            {/* <div className='leftNumberDiv'>
+                <div className="titleNumberDiv">
+                    <span>A</span>
+                    <span className='titleNumber'>{startnumder}-{endnumber}</span>
+                    <span>AA</span>
+                </div>
+                
             </div>
 
             <div className="rightNumberDiv">
-                <p>34</p>
+                <span>34</span>
+                
                 <div className='regionDiv'>
                     <p>rus</p>
                     <img src={flag} alt="flag russia" />
-                </div>
-            </div>
+                </div> 
+            </div> */}
         </button>
 
         <div className={`numberList ${!isOpen ? "active" : ""}`} >

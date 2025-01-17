@@ -11,7 +11,7 @@
     background: #e2e2e2;
     padding: 5px 0;
     cursor: pointer;
-    font-size: 60px;
+    font-size: 40px;
     font-family: 'RoadNumbers';
     width: 350px;
     z-index: 0;
@@ -24,6 +24,10 @@
         width: 100%;
         display: flex;
         justify-content: center;
+
+        .titleNumbersDiv{
+
+        }
     }
 
     .rightNumberDiv{
@@ -33,16 +37,17 @@
         border-left: 1.5px solid black;
         padding-left: 20px;
 
+        img{
+            width: 22px;
+            margin-left: 5px ;
+        }
 
         .regionDiv{
             display: flex;
             flex-direction: row;
+            font-family: 'Times New Roman', Times, serif;
             
 
-            img{
-                width: 22px;
-                margin-left: 5px ;
-            }
         }
     }
 }

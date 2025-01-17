@@ -16,8 +16,8 @@ export const BigNumber = () => {
     for (let i = 10; i < 99; i+=10){
         numbersArray[0].items.push({
             id: i/10 + 1, 
-            startName: String(i), 
-            endName: String(i+9),
+            startName: String('0' + i), 
+            endName: String('0' + (i+9)),
         })
     }
     for (let i = 100; i < 999; i+=100){

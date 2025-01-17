@@ -10,8 +10,6 @@ let config = {
 
 export const getUsers = Axios.get(`${DOMEN}/users`, config)
     .then(function (res) {
-        console.log(res.data);
-        console.log(res.status);
         return res.data.data[0];
     })
     .catch(function (error) {
