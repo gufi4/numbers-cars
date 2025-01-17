@@ -1,0 +1,72 @@
+.btnNumberDiv {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 5px solid black;
+  text-decoration: none;
+  color: black;
+  border-radius: 15px;
+  background: #e2e2e2;
+  padding: 5px 0;
+  cursor: pointer;
+  font-size: 60px;
+  font-family: "RoadNumbers";
+  width: 350px;
+  z-index: 0;
+}
+.btnNumberDiv p {
+  margin: 0;
+}
+.btnNumberDiv .leftNumberDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.btnNumberDiv .rightNumberDiv {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+  border-left: 1.5px solid black;
+  padding-left: 20px;
+}
+.btnNumberDiv .rightNumberDiv .regionDiv {
+  display: flex;
+  flex-direction: row;
+}
+.btnNumberDiv .rightNumberDiv .regionDiv img {
+  width: 22px;
+  margin-left: 5px;
+}
+
+.numberList {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 350PX;
+  background: #e2e2e2;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  border-bottom: 1px solid black;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: 0.1s ease;
+  z-index: 1;
+}
+.numberList .btn {
+  background: white;
+  font-size: 18px;
+  margin: 5px 0;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.numberList.active {
+  transform: translateY(0);
+  visibility: visible;
+}/*# sourceMappingURL=buttonNumber.css.map */

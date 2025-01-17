@@ -1,0 +1,31 @@
+.itemDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+  margin: 15px 0;
+}
+.itemDiv .link {
+  text-decoration: none;
+}
+.itemDiv .link .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  background: #e2e2e2;
+}
+.itemDiv .link .item p {
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.itemOpen {
+  background: #e2e2e2;
+  width: 350px;
+  height: 350px;
+  margin: 60px 15px;
+}/*# sourceMappingURL=itemPage.css.map */

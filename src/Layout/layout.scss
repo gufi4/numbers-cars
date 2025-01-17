@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'RoadNumbers';
+    src: url('/public/RoadNumbers2_0.ttf') format('truetype'),
+        url('/public/RoadNumbers2_0.otf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+.layout{
+    background: #17212B;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 387px;
+        min-height: 100vh;
+}
