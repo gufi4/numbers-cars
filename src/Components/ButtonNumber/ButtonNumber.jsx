@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 function ButtonNumber( { startnumder, endnumber, items} ) {
     const [isOpen, setIsOpen] = useState(true)
 
-
 return (
     <div className='bodyNumberDiv'>
         <button className='btnNumberDiv' 
@@ -29,9 +28,12 @@ return (
         </button>
 
         <div className={`numberList ${!isOpen ? "active" : ""}`} >
-            {items.map((item) => (
-                <Link className='btn' to={'/item'} key={item.id}>X {item.startName} - {item.endName} XX</Link>
-            ))}
+            {items.map((item) => {
+                let numberName = `${item.startName}-${item.endName}`;
+                return (
+                    <Link className='btn' to={`/item/${item.id}/${numberName}`} key={item.id}>X {item.startName} - {item.endName} XX</Link>
+                )
+            })}
         </div>
     </div>
 )

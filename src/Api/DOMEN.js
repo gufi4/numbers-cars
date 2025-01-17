@@ -1,1 +1,1 @@
-export const DOMEN = 'https://0337-146-0-76-117.ngrok-free.app/api';
+export const DOMEN = 'http://192.168.31.178:8000/api';
