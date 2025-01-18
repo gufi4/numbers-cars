@@ -59,9 +59,12 @@ return (
 
         <div className={`numberList ${!isOpen ? "active" : ""}`} >
 
-            {items.map((item) => (
-                <Link className='btn' to={'/item'} key={item.id}>X{item.startName}-{item.endName}XX</Link>
-            ))}
+            {items.map((item) => {
+                let numberName = `${item.startName}-${item.endName}`;
+                return (
+                    <Link className='btn' to={`/item/${item.id}/${numberName}`} key={item.id}>X{item.startName}-{item.endName}XX</Link>
+                )
+            })}
         </div>
     </div>
 )
