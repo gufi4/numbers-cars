@@ -1,29 +1,29 @@
-import {Link} from 'react-router-dom'
+//import {Link} from 'react-router-dom'
 import './itemPage.css'
 
-import foto from '../../assets/foto.png'
-import foto_2 from '../../assets/foto-2.png'
+//import foto_2 from '../../assets/foto-2.png'
 import {useState} from 'react'
 import {useParams} from 'react-router-dom'
 import {useEffect} from 'react';
 import {getItemsRange} from "../../Api/response.js";
-
-
-const items = ['001', '002', '003', '004', '005', '006', '007', '008', '009', '010']
+import CarNumber from "../../Components/CarNumber/CarNumber.jsx";
 
 
 function ItemPage() {
     const params = useParams();
     //const [isOpen, setIsOpen] = useState(true)
     const [numbersData, setNumbersData] = useState(['']);
+    const [rangeOfNumbers, setRangeOfNumbers] = useState('');
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await getItemsRange(params.id, params.numberName);
-                console.log(response);
+
                 setNumbersData(response);
+                console.log(`response: ${response}`);
+                setRangeOfNumbers(params.numberName);
                 setLoading(false);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -38,7 +38,8 @@ function ItemPage() {
             {loading ? (
                 <p>Loading...</p>
             ) : (
-                <CarNumberWithImageComponent data={numbersData}/>
+                //<p>${rangeOfNumbers}</p>
+                <CarNumberWithImageComponent items={numbersData} rangeOfNumbers={rangeOfNumbers}/>
             )
 
             }
@@ -65,19 +66,44 @@ function ItemPage() {
 // )
 }
 
-const CarNumberWithImageComponent = (data) => {
-    const items = data.data;
-    console.log('items: ', items);
+function createArrayWithNumbersFromRange(start, end) {
+    return [...Array(end - start + 1)].map((_, index) => {
+
+        let number = start + index;
+        while ((number).toString().length !== 3) {
+            number = '0' + number;
+        }
+        return number;
+    });
+}
+
+function CarNumberWithImageComponent({items, rangeOfNumbers}) {
+    let startNumber = rangeOfNumbers.slice(0, 3);
+    let endNumber = rangeOfNumbers.slice(4, 7);
+    let array = createArrayWithNumbersFromRange(Number(startNumber), Number(endNumber));
 
     return (
         <div className='itemDiv'>
-            {items.map((item) => {
-                console.log('item: ', item);
-                return <div className='item' key={item.id} style={{backgroundImage: 'url(' + item.image + ')'}}>
-                    <p>А{item.car_number}АА 34</p>
-                </div>
-            })}
+            {array.map((number, index) => {
+                items.map((numberItem) => {
+                    if (number === numberItem.car_number) {
+                        array[array.indexOf(number)] = numberItem;
+                    }
+                });
 
+                if (array[array.indexOf(number)] !== undefined) {
+
+                    return <div key={index} className='item'><CarNumber carNumber={array[index]}/></div>
+                    // return <div className='item' style={{backgroundImage: 'url(' + foto_2 + ')'}}>
+                    //      <p key={index}>А{array[index]}AA 34</p>;
+                    //  </div>
+                } else {
+                    return <div className='imageItem' key={index}
+                                style={{backgroundImage: 'url(' + array[index].image + ')'}}>
+                        <CarNumber carNumber={array[index].car_number}/>
+                    </div>
+                }
+            })}
         </div>
     )
 }
