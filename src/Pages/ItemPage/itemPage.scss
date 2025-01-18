@@ -3,24 +3,26 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 10px;
-    margin: 15px 0;
+    gap: 5px;
+    margin: 5px 0;
     background-size: auto;
 
-    .item{
+    .item, .imageItem {
         display: flex;
         align-items: self-end;
         justify-content: center;
         background-size: cover;
-        height: 300px;
-        width: 95%;
+        width: 97%;
+        border-radius: 10px;
+    }
 
-        p{
-            border: 1px solid aliceblue;
-            color: white;
-            font-weight: bold;
-            font-size: 55px;
-        }
+    .imageItem {
+        height: 300px;
+        padding-bottom: 10px;
+    }
+
+    .item {
+        height: 100%;
     }
 
     .link{
@@ -42,7 +44,6 @@
         }
     }
 }
-
 
 .itemOpen{
     background: #e2e2e2;

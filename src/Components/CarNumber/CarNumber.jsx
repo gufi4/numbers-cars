@@ -1,11 +1,11 @@
 import './carNumber.css'
 import flag from '../../assets/flag-russia.svg'
 
-function CarNumber( { carNumber, opasity } ) {
+function CarNumber({carNumber}) {
 
 
 return (
-    <div className='carNumberDiv' style={{opacity: {opasity}}}>
+    <div className='carNumberDiv'>
             <div className='leftDiv'>
                 <span>A{carNumber}AA</span>
             </div>
