@@ -9,7 +9,7 @@ import { Link} from 'react-router-dom'
 function Header() {
     const [isOpen, setIsOpen] = useState(true)
     const [collections, setCollections] = useState(['']);
-    const [username, setUsername] = useState('nULL username');
+    const [username, setUsername] = useState('Null username');
 
 
     const addCollection = () => {
