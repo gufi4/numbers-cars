@@ -2,7 +2,37 @@
     .contentDiv {
         margin-top: 100px;
         position: relative;
+    }
 
+    .myCollections {
+        color: white;
+        font-family: "Monospaced", serif;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
 
+        .myCollectionsString {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .collectionLink{
+            //For default text style
+            text-decoration: none;
+            color: darkblue;
+        }
+
+        .collectionItem {
+            background: white;
+            border-radius: 12px;
+            padding: 10px 20px;
+            margin: 5px 0;
+            position: relative;
+        }
+
+        .itemDescription{
+            font-size: 12px ;
+            opacity: .7;
+        }
     }
 }

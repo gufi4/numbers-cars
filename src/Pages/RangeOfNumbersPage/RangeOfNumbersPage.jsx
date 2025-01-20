@@ -1,5 +1,5 @@
 //import {Link} from 'react-router-dom'
-import './itemPage.css'
+import './rangeOfNumbersPage.css'
 
 //import foto_2 from '../../assets/foto-2.png'
 import {useState} from 'react'
@@ -9,7 +9,7 @@ import {getItemsRange} from "../../Api/response.js";
 import CarNumber from "../../Components/CarNumber/CarNumber.jsx";
 
 
-function ItemPage() {
+function RangeOfNumbersPage() {
     const params = useParams();
     //const [isOpen, setIsOpen] = useState(true)
     const [numbersData, setNumbersData] = useState(['']);
@@ -108,4 +108,4 @@ function CarNumberWithImageComponent({items, rangeOfNumbers}) {
     )
 }
 
-export default ItemPage
+export default RangeOfNumbersPage
